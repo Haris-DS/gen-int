@@ -1,0 +1,283 @@
+<div class="Container">
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+      {% if false %}
+        {% include 'bss-title-store-locator' %}
+        {% include 'bss-description-store-locator' %}
+      {% else %}
+        <h1 class="SectionHeader__Heading Heading u-h1">{{ page.title }}</h1>
+      {% endif %}
+    </div>
+  </header>
+<!--   <form
+    class="feedback-form"
+    onsubmit="myFunction()"
+    id="my-form"
+    action="https://formspree.io/f/xknabvar"
+    method="POST"
+  > -->
+    <form  class="feedback-form" onsubmit="myFunction()" id="my-form" action="https://formspree.io/f/xknabvar" method="POST">
+    <div class="row">
+      <div class="left-column">
+        <table class="feedback-table">
+          <thead>
+            <tr>
+              <th>PRODUCT</th>
+              <th><span class="icon icon-good" value="good"></span></th>
+              <th><span class="icon icon-neutral" value="neutral"></span></th>
+              <th><span class="icon icon-dissatisfied" value="dissatisfied"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Variety</th>
+              <td><input required="required" type="radio" name="range" value="good"></td>
+              <td><input required="required" type="radio" name="range" value="neutral"></td>
+              <td><input required="required" type="radio" name="range" value="dissatisfied"></td>
+            </tr>
+            <tr>
+              <th>Colour</th>
+              <td><input required="required" type="radio" name="colour" value="good"></td>
+              <td><input required="required" type="radio" name="colour" value="neutral"></td>
+              <td><input required="required" type="radio" name="colour" value="dissatisfied"></td>
+            </tr>
+            <tr>
+              <th>Quality</th>
+              <td><input required="required" type="radio" name="quality" value="good"></td>
+              <td><input required="required" type="radio" name="quality" value="neutral"></td>
+              <td><input required="required" type="radio" name="quality" value="dissatisfied"></td>
+            </tr>
+            <tr>
+              <th>Fit</th>
+              <td><input required="required" type="radio" name="fit" value="good"></td>
+              <td><input required="required" type="radio" name="fit" value="neutral"></td>
+              <td><input required="required" type="radio" name="fit" value="dissatisfied"></td>
+            </tr>
+            <tr>
+              <th>Print</th>
+              <td><input required="required" type="radio" name="print" value="good"></td>
+              <td><input required="required" type="radio" name="print" value="neutral"></td>
+              <td><input required="required" type="radio" name="print" value="dissatisfied"></td>
+            </tr>
+            <tr>
+              <th>Fabric</th>
+              <td><input required="required" type="radio" name="fabric" value="good"></td>
+              <td><input required="required" type="radio" name="fabric" value="neutral"></td>
+              <td><input required="required" type="radio" name="fabric" value="dissatisfied"></td>
+            </tr>
+            <tr>
+              <th>Price</th>
+              <td><input required="required" type="radio" name="price" value="good"></td>
+              <td><input required="required" type="radio" name="price" value="neutral"></td>
+              <td><input required="required" type="radio" name="price" value="dissatisfied"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="feedback-table">
+          <thead>
+            <tr>
+              <th>SERVICE</th>
+              <th><span class="icon icon-good"></span></th>
+              <th><span class="icon icon-neutral"></span></th>
+              <th><span class="icon icon-dissatisfied"></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>At Checkout</th>
+              <td><input required="required" type="radio" name="at-checkout" value="good" ></td>
+              <td><input required="required" type="radio" name="at-checkout" value="neutral" ></td>
+              <td><input required="required" type="radio" name="at-checkout" value="dissatisfied" ></td>
+            </tr>
+            <tr>
+              <th>On the Floor</th>
+              <td><input required="required" type="radio" name="on-the-floor" value="good"></td>
+              <td><input required="required" type="radio" name="on-the-floor" value="neutral"></td>
+              <td><input required="required" type="radio" name="on-the-floor" value="dissatisfied"></td>
+            </tr>
+            <tr>
+              <th>Fitting Room</th>
+              <td><input required="required" type="radio" name="fitting-room" value="good"></td>
+              <td><input required="required" type="radio" name="fitting-room" value="neutral"></td>
+              <td><input required="required" type="radio" name="fitting-room" value="dissatisfied"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="right-column">
+        <div class="field">
+          <label for="name">Name</label>
+          <input required="required" type="text" id="name" name="name">
+        </div>
+        <div class="field">
+          <label for="mobile-no">Mobile no</label>
+          <input required="required" type="tel" id="mobile-no" name="mobile">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input required="required" type="email" id="email" name="email">
+        </div>
+        <div class="field">
+          <label for="stores">Store</label>
+          <select required="required" id="stores" name="stores">
+            <option value hidden="hidden">Please Select Store</option>
+            <option value="lahore-gulberg">Lahore - Gulberg</option>
+            <option value="lahore-packages">Lahore - Packages</option>
+            <option value="lahore-emporium">Lahore - Emporium</option>
+            <option value="islamabad-giga-mall">Islamabad - Giga Mall</option>
+            <option value="islamabad-jinnah-super-market-store">Islamabad - Jinnah Super Market Store</option>
+            <option value="rawalpindi-bahria-town">Rawalpindi - Bahria Town</option>
+            <option value="rawalpindi-dissatisfieddar-store">Rawalpindi - dissatisfieddar Store</option>
+            <option value="gujranwala-fazal-centre">Gujranwala - Fazal Centre</option>
+            <option value="peshawar-spinzar-plaza">Peshawar - Spinzar Plaza</option>
+            <option value="multan-mall-of-multan">Multan - Mall of Multan</option>
+            <option value="hyderabad-outlet">Hyderabad - Outlet</option>
+            <option value="faisalabad-mediacom-store">Faisalabad - Mediacom Store</option>
+            <option value="karachi-dolmen-mall-clifton">Karachi - Dolmen Mall Clifton</option>
+            <option value="karachi-lucky-one-mall">Karachi - Lucky one Mall</option>
+            <option value="Karachi-zamzama">Karachi - Zamzama</option>
+            <option value="karachi-dolmen-tariq-road">Karachi - Dolmen Tariq road</option>
+            <option value="wazir-khan-mosque-pop-up-store">Wazir Khan Mosque - Pop up store</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Age</label>
+          <div class="age">
+            <label for="15-25">
+              <input required="required" type="radio" name="age" value="15-25" id="15-25">
+              15-25
+            </label>
+            <label for="26-35">
+              <input required="required" type="radio" name="age" id="26-35">
+              26-35
+            </label>
+            <label for="36-45">
+              <input required="required" type="radio" name="age" id="36-45">
+              36-45
+            </label>
+            <label for="46">
+              <input required="required" type="radio" name="age" id="46">
+              46+
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="comments">Comments</label>
+          <textarea id="comments"></textarea>
+        </div>
+        <p id="my-form-status"></p>
+
+        <div class="btn-holder">
+          <!-- <button id="my-form-button" onclick="show('popup')">Submit</button> -->
+          <button id="my-form-button">Submit</button>
+          <div class="popup" id="popup">
+            <div class="popup-holder">
+              <h1>Thankyou for your submission!</h1>
+              <a class="btn-close icon-clear" href="https://generation.com.pk/" onclick="hide('popup')"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = "https://generation.com.pk/";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+
+
+  //   $ = function(id) {
+  //   return document.getElementById(id);
+  // }
+
+
+  //          var hide = function(id) {
+  //   	 $(id).style.display ='none';
+  // }
+
+  // var show = function(id) {
+  // 	$(id).style.display ='flex';
+  // }
+
+     function myFunction() {
+     alert("Thankyou for your submission!"); }
+</script>
+<style>
+    .feedback-form .popup {
+      display: none;
+      position: fixed;
+      padding: 10px;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 20;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+  }
+
+  .feedback-form .popup-holder {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 50px 10px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .feedback-form .btn-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+  }
+
+  .feedback-form .btn-close:hover {
+    color: #939393;
+  }
+
+  .feedback-form .popup h1 {
+    font-family: 'galanogrotesque-suploadedfile';
+    font-size: 30px;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    .feedback-form .popup h1 {
+      font-size: 18px;
+    }
+  }
+</style>

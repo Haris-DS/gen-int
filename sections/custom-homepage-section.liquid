@@ -1,0 +1,225 @@
+<div class="img-gallery">
+        <div class="img-row">
+          <div class="img-column">
+            <a href="{{ section.settings.link_1 }}" class="img">
+              <img src="{{ section.settings.img_full | image_url }}"  alt="{{  section.settings.img_full.alt}}"/>
+              <span class="caption"><span class="title">{{ section.settings.title_1 }}</span></span>
+            </a>
+          </div>
+          <div class="img-column">
+            <a href="{{ section.settings.link_2 }}" class="img">
+              <img src="{{ section.settings.img_half-1  | image_url }}" alt="{{ section.settings.img_half-1.alt }}" />
+              <span class="caption"><span class="title">{{ section.settings.title_2 }}</span></span>
+            </a>
+            <a href="{{ section.settings.link_3 }}" class="img">
+              <img src="{{ section.settings.img_half-2  | image_url }}" alt="{{ section.settings.img_half-2.alt }}" />
+              <span class="caption"><span class="title">{{ section.settings.title_3 }}</span></span>
+            </a>
+          </div>
+        </div>
+        <div class="img-row">
+          <div class="img-column">
+            <a href="{{ section.settings.link_4 }}" class="img">
+              <img src="{{ section.settings.img_half-3  | image_url }}" alt="{{ section.settings.img_half-3.alt }}" />
+              <span class="caption"><span class="title">{{ section.settings.title_4 }}</span></span>
+            </a>
+            <a href="{{ section.settings.link_5 }}" class="img">
+              <img src="{{ section.settings.img_half-4  | image_url }}" alt="{{ section.settings.img_half-4.alt }}" />
+              <span class="caption"><span class="title">{{ section.settings.title_5 }}</span></span>
+            </a>
+          </div>
+          <div class="img-column">
+            <a href="{{ section.settings.link_6 }}" class="img">
+              <img src="{{ section.settings.img_full-1  | image_url }}" alt="{{ section.settings.img_full-1.alt }}" />
+              <span class="caption"><span class="title">{{ section.settings.title_6 }}</span></span>
+            </a>
+          </div>
+        </div>
+   <div class="img-row">
+          
+          
+            <a style="width:100%;" href="{{ section.settings.link_7 }}" class="img">
+              <img  src="{{ section.settings.img_full-2  | image_url }}" alt="{{ section.settings.img_full-2.alt}}" />
+              <span class="caption"><span class="title">{{ section.settings.title_7 }}</span></span>
+            </a>
+          
+        </div>
+  
+  
+      </div>
+
+
+
+      {% schema %}
+  {
+    "name": "Home-page-tiles",
+    "settings": [
+
+      {
+        "type": "url",
+        "id": "link_1",
+        "label": "Link 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_full",
+        "label": "Full-image"
+      },
+      {
+        "type": "text",
+        "id": "title_1",
+        "label": "Title"
+      },
+       {
+        "type": "url",
+        "id": "link_2",
+        "label": "Link 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_half-1",
+        "label": "Half-image"
+      },
+      {
+        "type": "text",
+        "id": "title_2",
+        "label": "Example Title"
+      },
+      {
+        "type": "url",
+        "id": "link_3",
+        "label": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_half-2",
+        "label": "Half-image"
+      },
+      {
+        "type": "text",
+        "id": "title_3",
+        "label": "Example Title"
+      },
+      {
+        "type": "url",
+        "id": "link_4",
+        "label": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_half-3",
+        "label": "Half-image"
+      },
+      {
+        "type": "text",
+        "id": "title_4",
+        "label": "Example Title"
+      },
+      {
+        "type": "url",
+        "id": "link_5",
+        "label": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_half-4",
+        "label": "Half-image"
+      },
+      {
+        "type": "text",
+        "id": "title_5",
+        "label": "Example Title"
+      },
+      {
+        "type": "url",
+        "id": "link_6",
+        "label": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_full-1",
+        "label": "Full-image"
+      },
+      {
+        "type": "text",
+        "id": "title_6",
+        "label": "Example Title"
+      },{
+        "type": "url",
+        "id": "link_7",
+        "label": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_full-2",
+        "label": "Full-Width-image"
+      },
+      {
+        "type": "text",
+        "id": "title_7",
+        "label": "Example Title"
+      }
+      
+	 
+	
+ 
+  ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+
+        .img-gallery {
+          background: #000;
+        }
+
+        .img-gallery img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .img-gallery .img-row {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .img-gallery .img-column {
+          width: 50%;
+        }
+
+        .img-gallery .img {
+          color: #fff;
+          position: relative;
+          display:block;
+          
+        }
+
+        .img-gallery .img:hover {
+          text-decoration: none;
+        }
+
+        .img-gallery .caption {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: -webkit-xxx-large;
+          font-weight: bolder;
+          text-align: center;
+        }
+  @media only screen and (max-width: 767px) {
+  .img-gallery .caption {
+         font-size: 11px;
+         font-weight: 600;
+        }
+}
+     
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

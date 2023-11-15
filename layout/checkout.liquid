@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+  </body>
+</html>
+<style>
+  @font-face {
+    font-family: 'galanogrotesque-buploadedfile';
+    src: url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/galano_grotesque_bold-webfont.woff2?v=1670841312') format('woff2'),
+           url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/galano_grotesque_bold-webfont.woff?v=1670841312') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+      font-family: 'galanogrotesque-suploadedfile';
+      src: url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/galano_grotesque_semi_bold-webfont.woff2?v=1670841312') format('woff2'),
+           url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/galano_grotesque_semi_bold-webfont.woff?v=1670841312') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: 'galanogrotesque-ruploadedfile';
+      src: url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/galano_grotesque-webfont_b7a0448e-54eb-4fae-8886-b4c2ac773587.woff2?v=1670841312') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/galano_grotesque-webfont_80d268a9-d275-4a35-a907-5122fa660984.woff?v=1670841312') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  body {
+    font-family: "galanogrotesque-ruploadedfile";
+  }
+
+  h2, .heading-2 {
+    font-family: "galanogrotesque-ruploadedfile";
+    text-transform: uppercase;
+  }
+
+  .main .input-checkbox, .main .input-radio,
+  .main .field__input {
+    border-color: #000;
+  }
+  
+  .btn, .sp-modal-toggle,
+  .input-checkbox,
+  .field__input {
+    border-radius: 0;
+  }
+
+  .display-table .order-summary-toggle__icon-wrapper {
+    display: none;
+  }
+
+  .order-summary-toggle__text {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .order-summary-toggle__text:before {
+    content: '';
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/business.svg?v=1668681069) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+  .section--payment-method .section__header {
+    position: relative;
+    padding-right: 80px;
+  }
+
+  .section--payment-method .section__header:after {
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/secure.webp?v=1670924362) no-repeat;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    width: 80px;
+    height: 40px;
+  }
+
+  .breadcrumb li:first-child a {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .breadcrumb li:first-child a:before {
+    content: 'Bag';
+    font-size: 12px;
+    line-height: 18.2px;
+  }
+
+  .step[data-step="contact_information"] .step__footer .step__footer__previous-link-content {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .step[data-step="contact_information"] .step__footer .step__footer__previous-link-content:before {
+    content: 'Return to bag';
+    font-size: 14px;
+    line-height: 16px;
+  }
+</style>
+
+

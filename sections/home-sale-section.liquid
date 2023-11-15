@@ -1,0 +1,92 @@
+<div class="home-sale-section">
+  {% comment %}<img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/banr_1800x.png?v=1666811878" />
+  <a class="btn-shop" href="#">SHOP THE SALE</a>{% endcomment %}
+  <img src="{{ section.settings.img_full | image_url }}"  alt="{{  section.settings.img_full.alt}}"" />
+  <a class="btn-shop" href="{{ section.settings.button_link }}" class="ButtonGroup__Item Button">{{ section.settings.button_text | escape }}</a>
+  
+</div>
+{% schema %}
+{
+  "name": "Home Sale Section",
+  "settings":
+  [
+    {
+        "type": "image_picker",
+        "id": "img_full",
+        "label": "Full-image"
+      },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link"
+        }
+      
+  ],
+  "presets":
+  [
+    {
+      "name": "Home Sale Section"
+    }
+  ],
+  "templates":
+  [
+    "404",
+    "article",
+    "blog",
+    "cart",
+    "collection",
+    "list-collections",
+    "index",
+    "page",
+    "product",
+    "search"
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .home-sale-section {
+    position: relative;
+  }
+
+  .home-sale-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .home-sale-section .btn-shop {
+    color: #363636;
+    background-color: #fff;
+    padding: 8px;
+    min-width: 170px;
+    margin: 8px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%, 0);
+    display: inline-block;
+    line-height: normal;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    font-family: Futura,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-transition: color .45s cubic-bezier(.785,.135,.15,.86),border .45s cubic-bezier(.785,.135,.15,.86);
+    transition: color .45s cubic-bezier(.785,.135,.15,.86),border .45s cubic-bezier(.785,.135,.15,.86);
+    z-index: 1;
+    -webkit-tap-highlight-color: initial;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

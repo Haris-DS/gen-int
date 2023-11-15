@@ -1,0 +1,734 @@
+<script src="{{ 'jquery.custom.js' | asset_url }}" defer></script>
+
+<style>
+  .fol .top-area {
+    background-color: #ef4036;
+    text-transform: uppercase;
+    font-family: 'galanogrotesque-suploadedfile';
+  }
+
+  .fol .top-area ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .fol .top-area ul li {
+    padding: 10px;
+  }
+
+  .fol-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .fol-nav li a {
+    display: block;
+    padding: 10px;
+    color: #000;
+  }
+
+  .fol-nav li a:hover {
+    background-color: #f8776a;
+  }
+
+  .fol .banner img {
+    width: 100%;
+  }
+
+  .fol .new-in-this-week {
+    position: relative;
+  }
+
+  .fol .new-in-this-week:before {
+    content: '';
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img8.png?v=1678885524) no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 62px;
+    position: absolute;
+    left: 0;
+    top: -16px;
+  }
+
+  .fol .new-in-this-week:after {
+    content: '';
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img9.png?v=1678885524) no-repeat;
+    background-size: cover;
+    width: 42px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: -15px;
+  }
+
+  .fol .new-in-this-week .heading {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .fol .new-in-this-week .heading h2 {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/bg-heading.png?v=1678949648) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 17px;
+  }
+
+  .new-in-this-week-slider {
+    padding: 0 30px;
+  }
+
+  .new-in-this-week-slider .slick-list {
+    padding-right: 20%;
+  }
+
+  .new-in-this-week-slider .slide {
+    padding: 0 3px;
+  }
+
+  .new-in-this-week-slider .collection-img {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .new-in-this-week-slider .collection-name {
+    text-transform: uppercase;
+    font-family: 'galanogrotesque-suploadedfile';
+    color: #000;
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .new-in-this-week-slider .collection-name a {
+    color: #000;
+    font-family: 'galanogrotesque-suploadedfile';
+  }
+
+  .new-in-this-week-slider hr.green {
+    border-color: #4ca341;
+  }
+
+  .new-in-this-week-slider hr.red {
+    border-color: #ef4036;
+  }
+
+  .new-in-this-week-slider hr.blue {
+    border-color: #7697c4;
+  }
+
+  .new-in-this-week-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    border-radius: 100%;
+    background-color: #f8786b;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    margin-top: -48px;
+    font-size: 20px;
+  }
+
+  .new-in-this-week-slider .slick-arrow.slick-prev {
+    left: 0;
+  }
+
+  .new-in-this-week-slider .slick-arrow.slick-next {
+    right: 0;
+  }
+
+  .fol .collection-tiles {
+    list-style: none;
+    padding: 25px 0;
+    margin: 0 -15px;
+    position: relative;
+    text-align: center;
+  }
+
+  .fol .collection-tiles:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img15.png?v=1678963062) no-repeat;
+    background-size: cover;
+    width: 78px;
+    height: 81px;
+  }
+
+  .fol .collection-tiles:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img16.png?v=1678963062) no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+  }
+
+  .fol .collection-tiles li {
+    padding: 15px;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .fol .collection-tiles li.big {
+    max-width: 90%;
+  }
+
+  .fol .collection-tiles .box {
+    --mask:
+    radial-gradient(5.30px at 50% calc(100% - 6.75px),#000 99%,#0000 101%) calc(50% - 10px) 0/20px 100%,
+    radial-gradient(5.30px at 50% calc(100% + 1.75px),#0000 99%,#000 101%) 50% calc(100% - 5px)/20px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+    background: #7697c4;
+  }
+
+  .fol .collection-tiles h3 {
+    text-transform: uppercase;
+    color: #f4e1db;
+    font-size: 18px;
+  }
+
+  .fol .collection-tiles h3 a {
+    color: #000;
+    display: block;
+    padding: 15px 10px 20px;
+  }
+
+  .fol .collection-tiles li.big h3 {
+    font-size: 22px;
+  }
+
+  .fol .blog-section {
+    position: relative;
+    border: 2px solid #ef4036;
+    background: #f4e1db;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .fol .blog-section:before {
+    content: "";
+    position: absolute;
+    right: -25px;
+    top: -35px;
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img20.png?v=1678966123) no-repeat;
+    background-size: cover;
+    width: 52px;
+    height: 53px;
+  }
+
+  .fol .blog-section:after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    bottom: -70px;
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img21.png?v=1678966123) no-repeat;
+    background-size: cover;
+    width: 95px;
+    height: 99px;
+  }
+
+  .fol .blog-section-slider {
+    padding: 0 20px;
+  }
+
+  .fol .blog-section-slider .text {
+    color: #ef4036;
+    padding: 0 0 20px;
+  }
+
+  .fol .gen-logo {
+    width: 100px;
+    margin: 0 auto 10px;
+  }
+
+  .fol .blog-section-slider h2 {
+    text-transform: uppercase;
+    font-family: 'galanogrotesque-suploadedfile';
+    font-size: 30px;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .fol .blog-section-slider time {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .fol .blog-section-slider .read-more {
+    font-family: 'galanogrotesque-suploadedfile';
+    color: #ef4036;
+  }
+
+  .fol .blog-section-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 20px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+  }
+
+  .fol .blog-section-slider .slick-arrow.slick-prev {
+    left: -10px;
+  }
+
+  .fol .blog-section-slider .slick-arrow.slick-next {
+    right: -10px;
+  }
+
+  .fol .blog-section-slider .slick-arrow.slick-disabled {
+    display: none !important;
+  }
+
+  .fol .store-pickup {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .fol .store-pickup .img,
+  .fol .store-pickup .img img {
+    position: relative;
+    left: 50%;
+    min-width: 800px;
+  }
+
+  .fol .store-pickup .img img {
+    left: -50%;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .fol .top-area {
+      font-size: 30px;
+    }
+
+    .fol .top-area ul li {
+      padding: 0 30px;
+    }
+
+    .fol-nav li a {
+      padding: 20px 50px;
+    }
+
+    .fol .new-in-this-week:before {
+      width: 120px;
+      height: 188px;
+      top: -30px;
+    }
+
+    .fol .new-in-this-week:after {
+      width: 156px;
+      height: 120px;
+      right: 15px;
+      top: -15px;
+    }
+
+    .new-in-this-week-slider {
+      padding: 0 60px;
+    }
+
+    .new-in-this-week-slider .slide {
+      padding: 0 15px;
+    }
+
+    .new-in-this-week-slider .slick-arrow {
+      width: 40px;
+      height: 40px;
+      margin-top: -58px;
+      font-size: 30px;
+    }
+
+    .new-in-this-week-slider .collection-img {
+      margin-bottom: 30px;
+    }
+
+    .new-in-this-week-slider .collection-name {
+      font-size: 18px;
+    }
+
+    .fol .collection-tiles {
+      margin: 0 -25px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .fol .collection-tiles li {
+      padding: 25px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .fol .top-area {
+      font-size: 40px;
+    }
+
+    .fol-nav li a {
+      padding: 20px 100px;
+    }
+
+    .fol .blog-section {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .fol .blog-section-slider {
+      padding: 0 70px;
+    }
+
+    .fol .blog-section-slider .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+
+    .fol .blog-section-slider .text {
+      width: 40%;
+      padding: 30px 15px;
+    }
+
+    .fol .blog-section-slider .img {
+      width: 60%;
+      padding: 0 15px;
+    }
+
+    .fol .gen-logo {
+      margin: 0 0 50px;
+    }
+
+    .fol .blog-section-slider h2 {
+      font-size: 40px;
+    }
+
+    .fol .blog-section-slider time {
+      margin-bottom: 80px;
+    }
+
+    .fol .blog-section-slider .slick-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+    }
+
+    .fol .blog-section-slider .slick-arrow.slick-prev {
+      left: 0;
+    }
+
+    .fol .blog-section-slider .slick-arrow.slick-next {
+      right: 0;
+    }
+  }
+</style>
+
+<div class="fol">
+  <div class="top-area">
+    <div class="Container">
+      <ul>
+        <li>Factory outlet</li>
+        <li>UPTO 70% OFF!</li>
+      </ul>
+    </div>
+  </div>
+  <div class="Container">
+    <ul class="fol-nav">
+      <li><a href="#">UNSTITCHED</a></li>
+      <li><a href="#">DUPATTAS</a></li>
+      <li><a href="#">TRIMS</a></li>
+    </ul>
+    <div class="banner">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img6.jpg?v=1678879295"
+        width="1823"
+        height="835"
+        alt="Banner"
+      >
+    </div>
+  </div>
+  <div class="new-in-this-week">
+    <div class="Container">
+      <div class="heading">
+        <h2>New in this week!</h2>
+      </div>
+      <div class="new-in-this-week-slider">
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img10.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="Lawn"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Lawn</a></h3>
+            <hr class="green">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img11.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="Cambrics"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Cambrics</a></h3>
+            <hr class="red">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img12.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="KHADDAR"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">KHADDAR</a></h3>
+            <hr class="blue">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img13.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="Embroidered"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Embroidered</a></h3>
+            <hr class="green">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img14.jpg?v=1678885525"
+                width="296"
+                height="303"
+                alt="Printed"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Printed</a></h3>
+            <hr class="blue">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img10.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="Lawn"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Lawn</a></h3>
+            <hr class="green">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img11.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="Cambrics"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Cambrics</a></h3>
+            <hr class="red">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img12.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="KHADDAR"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">KHADDAR</a></h3>
+            <hr class="blue">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img13.jpg?v=1678885524"
+                width="296"
+                height="303"
+                alt="Embroidered"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Embroidered</a></h3>
+            <hr class="green">
+          </div>
+        </div>
+        <div class="slide">
+          <div class="collection">
+            <a href="#" class="collection-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img14.jpg?v=1678885525"
+                width="296"
+                height="303"
+                alt="Printed"
+              >
+            </a>
+            <h3 class="collection-name"><a href="#">Printed</a></h3>
+            <hr class="blue">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Container">
+    <ul class="collection-tiles">
+      <li>
+        <div class="box">
+          <a href="#" class="img">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img17.jpg?v=1678962835"
+              width="517"
+              height="535"
+              alt="TRIMS"
+            >
+          </a>
+          <h3><a href="#">TRIMS</a></h3>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <a href="#" class="img">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img18.jpg?v=1678962835"
+              width="632"
+              height="653"
+              alt="UNSTITCHED"
+            >
+          </a>
+          <h3><a href="#">UNSTITCHED</a></h3>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <a href="#" class="img">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img19.jpg?v=1678962835"
+              width="517"
+              height="535"
+              alt="DUPATTAS"
+            >
+          </a>
+          <h3><a href="#">DUPATTAS</a></h3>
+        </div>
+      </li>
+    </ul>
+    <div class="blog-section">
+      <div class="blog-section-slider">
+        <div class="slide">
+          <div class="row">
+            <div class="text">
+              <div class="gen-logo">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img23.png?v=1678966123"
+                  width="188"
+                  height="124"
+                  alt="geloves"
+                >
+              </div>
+              <h2>How to make the most out of Our Fabrics</h2>
+              <time datetime="2022-08-10">10 . AUG . 2022</time>
+              <a href="#" class="read-more">READ MORE</a>
+            </div>
+            <div class="img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img22.jpg?v=1678966123"
+                width="952"
+                height="736"
+                alt="Video Image"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="row">
+            <div class="text">
+              <div class="gen-logo">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img23.png?v=1678966123"
+                  width="188"
+                  height="124"
+                  alt="geloves"
+                >
+              </div>
+              <h2>How to make the most out of Our Fabrics</h2>
+              <time datetime="2022-08-10">10 . AUG . 2022</time>
+              <a href="#" class="read-more">READ MORE</a>
+            </div>
+            <div class="img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img22.jpg?v=1678966123"
+                width="952"
+                height="736"
+                alt="Video Image"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="store-pickup">
+    <div class="img">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/img24.jpg?v=1679044492"
+        width="1920"
+        height="458"
+        alt="Store Pickup"
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,217 @@
+{% if template contains 'product' %}
+  {% comment %}{% endcomment %}
+  <div id="huratips-addtocart-sticky" class="fixed-sticky-cart">
+    {% comment %}<img class="sticky-product-img" src="{{ product.featured_image | img_url: 'original' }}" >{% endcomment %}
+    <form
+      name="myForm"
+      id="myForm"
+      class="sticky-add-to-bag"
+      action="/cart/add"
+      onsubmit="return validateForm()"
+      method="post"
+      novalidate
+    >
+      <!-- <span> Select Size</span><br> -->
+      <select name="id" id="time" required class="variant-selector select2">
+        <option class="sze" form="myForm" value="" selected disabled>Size</option>
+        {% for variant in product.variants %}
+          {% if variant.available %}
+            <option
+              form="myForm"
+              {% if variant == product.selected_or_first_available_variant %}
+              {% endif %}
+              value="{{variant.id}}"
+            >
+              {{ variant.option1 }}
+            </option>
+          {% else %}
+            <option value="1" class="vrnt-opt" disabled>
+              {{ variant.option1 | append: ' &nbsp &nbsp Sold Out' }}
+            </option>
+          {% endif %}
+        {% endfor %}
+      </select>
+      {% comment %}<div class="qtydiv"> <div class="qtybox"> <span class="btnqty qtyminus icon icon-minus">-</span> <input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input quantity-input-qty" readonly=""> <span class="btnqty qtyplus icon icon-plus">+</span> </div> </div>}{% endcomment %}
+      <button type="submit" id="submit" class="custom-add-to-cart">Add to Bag</button>
+    </form>
+    <style>
+      .sticky-product-img{
+      width:auto;
+      max-width:70px;
+      max-height: 70px !important;
+      }
+      .qtydiv label{
+      display: block;
+      margin-bottom: 12px;
+      color: #747a7b;
+      }
+      .qtydiv .quantity-input {
+      text-align: center;
+      width: 50px;
+      outline: none;
+      border: none;
+      min-height: unset !important;
+      line-height: 35px;
+      border-radius: 0;
+      margin: 0;
+      height: unset !important;
+      background: transparent;
+      }
+      .qtydiv .btnqty {
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      min-height: 60px;
+      line-height: 60px;
+      width: 30px;
+      text-align: center;
+      }
+      .product-form__item .qtydiv {
+      margin: 0;
+      }
+      .qtybox {
+      width: max-content;
+      height: 60px;
+      display: flex;
+      background:#f2f2f4;
+      }
+      .product-form__item .qtybox span.btnqty {
+      min-height: 40px;
+      line-height: 40px;
+      }
+      .product-form__item .qtybox {
+      height: 40px;
+      }
+      button.shopify-payment-button__button.shopify-payment-button__button--unbranded:hover {
+      background: lightgray !important;
+      }
+    </style>
+  </div>
+
+  <style>
+    #huratips-addtocart-sticky button:hover {
+    background: lightgray;
+    color: #000;
+    }
+    #huratips-addtocart-sticky button {
+    padding: 0 10px;
+    background: #000;
+    border: none;
+    margin: auto 0px;
+    color: #fff;
+    }
+    .qtydiv {
+    justify-content: center;
+    margin: auto 10px;
+    }
+
+    .fixed-sticky-cart {
+    display: inline;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    background: #fff;
+    padding-top: 5px;
+    /* border-top: 1px solid #e2e2e2; */
+    height: auto !important;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 20px 20px 20px;
+    transition: bottom .4s ease-in-out;
+    padding: 20px 20px 26px;
+    -webkit-box-shadow: 0 -4px 8px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 -4px 8px rgba(0,0,0,.2);
+    box-shadow/* Start code Code */: 0 -4px 8px rgb(0 0 0 / 20%);
+    }
+    #huratips-addtocart-sticky select,
+    #huratips-addtocart-sticky input,
+    #huratips-addtocart-sticky button{
+    height:60px;
+    vertical-align: middle;
+    }
+    #huratips-addtocart-sticky input{
+    width: 50px;
+    text-align: center;
+    background: transparent;
+    padding: 0;
+    }
+    #huratips-addtocart-sticky button{
+    padding:0 10px;
+    max-width: 345px;
+    width: 49%;
+    }
+    select.variant-selector {
+        width: 49%;
+    }
+    @media screen and (max-width:750px){
+    .qtydiv .btnqty {
+    width: 20px;
+    }
+    #huratips-addtocart-sticky {
+    padding: 15px 13px 15px;
+    }
+    }
+  </style>
+{% endif %}
+
+<script>
+     function validateForm(){
+    const isValid = myForm.checkValidity();
+    if(!isValid){
+      alert("Please Select Size");
+    }
+    return isValid;
+  }
+  const select = document.getElementById('time');
+  const submitButton = document.getElementById('submit');
+  document.getElementById('time').addEventListener('change', () => {
+    if (select.value === '1') {
+      submitButton.disabled = true;
+    } else {
+      submitButton.disabled = false;
+    }
+  });
+</script>
+<script>
+  // $(window).scroll(function(){
+  // if ($(window).scrollTop() >= 300) {
+  // $('#huratips-addtocart-sticky').addClass('fixed-sticky-cart');
+  // }
+  // else {
+  // $('#huratips-addtocart-sticky').removeClass('fixed-sticky-cart');
+  // }
+  // });
+
+
+  function aliFunction(ali) {
+  if (ali.matches) { // If media query matches
+  $(window).scroll(function(){
+  if ($(window).scrollTop() >= 100) {
+  $('#huratips-addtocart-sticky').addClass('fixed-sticky-cart');
+  $(".ProductForm").css("display", "none");
+  }
+  else {
+  $('#huratips-addtocart-sticky').removeClass('fixed-sticky-cart');
+  }
+  });
+  } else {
+  $(window).scroll(function(){
+  if ($(window).scrollTop() >= 300) {
+  $('#huratips-addtocart-sticky').addClass('fixed-sticky-cart');
+
+  }
+  else {
+  $('#huratips-addtocart-sticky').removeClass('fixed-sticky-cart');
+  }
+  });
+  }
+  }
+
+  var ali = window.matchMedia("(max-width: 700px)")
+  aliFunction(ali) // Call listener function at run time
+  ali.addListener(aliFunction) // Attach listener function on state changes
+</script>

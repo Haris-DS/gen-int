@@ -1,0 +1,158 @@
+<div class="cntdw">
+  <div class="img-mobile">
+    <img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/countdown-mobile.jpg?v=1684497505">
+  </div>
+  <div class="img-desktop">
+    <img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/prehype-web-banner.jpg?v=1684495940">
+  </div>
+  <div class="caption">
+    <ul class="countdown-clock">
+      <!-- <li><span id="days"></span>Days</li> -->
+      <li><span id="hours"></span>hr</li>
+      <li><span id="minutes"></span>min</li>
+      <li><span id="seconds"></span>sec</li>
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+   "name": "Countdown Banner",
+   "tag": "section",
+   "class": "home-hero-image",
+   "max_blocks": 1,
+   "blocks": [{
+      "type": "image",
+      "name": "Image",
+      "settings": [{
+            "type": "header",
+            "content": "Hero Image"
+         },
+         {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+         }
+      ]
+   }],
+   "presets": [{
+      "name": "Countdown Banner",
+      "category": "Image",
+      "blocks": [{
+         "type": "image"
+      }]
+   }]
+}
+{% endschema %}
+
+{% stylesheet %}
+  @font-face {
+    font-family: 'scarecrowregular';
+    src: url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/scarecrow-regular-webfont.woff2?v=1684504221') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0650/8249/1105/files/scarecrow-regular-webfont.woff?v=1684504221') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  .cntdw {
+    position: relative;
+    margin-top: 90px;
+    font-family: 'scarecrowregular';
+  }
+
+  .cntdw .img-desktop {
+    display: none;
+  }
+
+  .cntdw img {
+    width: 100%;
+  }
+
+  .cntdw .caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .countdown-clock {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    padding: 0px 20px;
+    color: #fff;
+  }
+
+  .countdown-clock li{
+  	margin: 0 0.11%;
+    background: #D43833;
+    border-radius: 10px;
+    padding: 15px 30px;
+    width: 33%;
+  }
+
+  .countdown-clock li span {
+  	display: block;
+  	color: #fff;
+  	font-size: 40px;
+    line-height: 1em;
+    font-weight: bold;
+  	letter-spacing: 2px;
+  }
+
+  @media (min-width: 768px) {
+    .cntdw .img-desktop {
+      display: block;
+    }
+
+    .cntdw .img-mobile {
+      display: none;
+    }
+
+    .cntdw .caption {
+      font-size: 40px;
+      top: 24%;
+    }
+
+    .countdown-clock li {
+
+    }
+
+    .countdown-clock li span {
+      font-size: 60px;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+    const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  let countDown = new Date('May 19, 2023 21:00:00').getTime(),
+      x = setInterval(function() {
+
+        let now = new Date().getTime(),
+            distance = countDown - now;
+
+        // document.getElementById('days').innerText = Math.floor(distance / (day)),
+          document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        // if (distance < 0) {
+        //  clearInterval(x);
+        //  'IT'S MY BIRTHDAY!;
+        // }
+
+      }, second)
+{% endjavascript %}

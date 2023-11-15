@@ -1,0 +1,1347 @@
+<style>
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+  }
+
+  .align-items-end {
+    -webkit-box-align: end !important;
+    -ms-flex-align: end !important;
+    align-items: flex-end !important;
+  }
+
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+  }
+
+  @media (min-width: 768px) {
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .text-md-right {
+        text-align: right;
+    }
+  }
+  
+  .static-page-banner {
+    margin-bottom: 50px;
+  }
+  @media (max-width: 1199px) {
+    .static-page-banner {
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 991px) {
+    .static-page-banner {
+      margin-bottom: 30px;
+    }
+  }
+  .static-page-banner img {
+    width: 100%;
+  }
+  .static-page-banner h1 {
+    font-size: 40px;
+    line-height: 1em;
+    padding: 45px;
+    border: 1px solid #000;
+    margin: 0;
+  }
+  @media (max-width: 1199px) {
+    .static-page-banner h1 {
+      font-size: 36px;
+      padding: 30px;
+    }
+  }
+  @media (max-width: 991px) {
+    .static-page-banner h1 {
+      font-size: 30px;
+      padding: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .static-page-banner h1 {
+      font-size: 24px;
+    }
+  }
+  .history-section {
+    margin-bottom: 70px;
+  }
+  @media (max-width: 767px) {
+    .history-section {
+      margin-bottom: 40px;
+    }
+  }
+  .history-section.first .row {
+    border-top: 1px solid #000;
+  }
+  .history-section .year {
+    display: block;
+    width: 50%;
+    font-size: 36px;
+    line-height: 1em;
+    padding: 0 15px 50px;
+  }
+  @media (max-width: 1199px) {
+    .history-section .year {
+      font-size: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  @media (max-width: 991px) {
+    .history-section .year {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .history-section .year {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+  .history-section .row {
+    border-bottom: 1px solid #000;
+  }
+  .history-section img {
+    margin: -1px 0;
+  }
+  .history-section .text {
+    padding: 40px;
+    font-size: 13px;
+    line-height: 27px;
+    max-width: 530px;
+  }
+  @media (max-width: 1199px) {
+    .history-section .text {
+      max-width: 100%;
+      padding: 30px;
+    }
+  }
+  @media (max-width: 991px) {
+    .history-section .text {
+      padding: 20px 30px 20px 0;
+      line-height: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .history-section .text {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  .history-section h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1199px) {
+    .history-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 991px) {
+    .history-section h2 {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .history-section h2 {
+      font-size: 18px;
+    }
+  }
+  .history-section p {
+    margin: 0;
+  }
+  .history-section .open-close.active .opener:after {
+    background-image: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/keyboard_arrow_up.svg?v=1670328497);
+  }
+  .history-section .open-close.active .opener .more {
+    display: none;
+  }
+  .history-section .open-close.active .opener .less {
+    display: inline;
+  }
+  .history-section .open-close .opener {
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 40px;
+    margin-top: 40px;
+  }
+  @media (max-width: 1199px) {
+    .history-section .open-close .opener {
+      margin-top: 30px;
+    }
+  }
+  @media (max-width: 991px) {
+    .history-section .open-close .opener {
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 767px) {
+    .history-section .open-close .opener {
+      padding-right: 30px;
+      margin-left: 30px;
+    }
+  }
+  .history-section .open-close .opener:after {
+    background: url(https://cdn.shopify.com/s/files/1/0650/8249/1105/files/keyboard_arrow_down.svg?v=1670328497) no-repeat;
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  @media (max-width: 767px) {
+    .history-section .open-close .opener:after {
+      font-size: 20px;
+    }
+  }
+  .history-section .open-close .opener .less {
+    display: none;
+  }
+  .history-section .open-close .opener:hover {
+    color: #afafaf;
+  }
+</style>
+<div class="history-page-new">
+  <section class="static-page-banner">
+    <img
+      src="https://generation-static.b-cdn.net/pub/media/StaticPageImages/history-banner_1.jpg"
+      alt=""
+    />
+    <h1 class="text-center text-uppercase">History</h1>
+  </section>
+  <div class="history-sections-area">
+    <div class="history-section first">
+      <strong class="year text-center text-md-right">1983</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            class="full-width-img"
+            src="https://generation-static.b-cdn.net/pub/media/StaticPageImages/1983.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">The BIRTH of generation</h2>
+            <p>
+              The 1980s were the crucial years that shaped up the political
+              climate of Pakistan until this very day. While the feminist
+              movement was in full form on the global stratosphere, Zia Ul Haq’s
+              regime was trying to push women behind closed doors. It was the
+              visionary duo of Saad and Nosheen Rahman who chose to follow the
+              voice of reason. With Nosheen and her sister in law Ghazala
+              Rahman, both being the founding members of the Women’s Action
+              Forum founded in 1981, which brought the movement to Pakistan, it
+              was inevitable for them to invest in the vision of the empowered
+              Pakistani woman.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden" style="display: none">
+                <p>
+                  Being an expert in sizing and inheriting his family’s great
+                  love for innovation in fabric and material, Saad Rahman along
+                  with his wife made it their business to provide truly modern
+                  but quintessentially Pakistani clothing for the woman of the
+                  future. Based in cottons and reinventing the
+                  <em>Shalwar Kamiz</em> silhouette in a time where polyester
+                  reigned supreme.
+                </p>
+                <p>
+                  Was it a risk to turn against the tide and invest in a market
+                  that virtually didn’t exist and open up Pakistan’s first
+                  womenswear exclusively ready to wear label? Yes. Did it pay
+                  off? Well GENERATION’s 37-year legacy is testament to that.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1984</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1984.webp?v=1670325438"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">International Influence</h2>
+            <p>
+              In their initial days the Rahmans toyed with multiple
+              revolutionary ideas, introducing the internationally utilized
+              format of 4 seasonal collections in the country vowing never to
+              repeat a design and continuously working towards innovation and
+              newness in fashion. Introducing the concept of sizing in ready to
+              wear, as well as flying in designers from Europe to design
+              exclusive collections for the brand. The “Brushstroke” collection
+              with its edgy sportswear detailing and statement prints was the
+              product of one such collaborations, however they were soon to
+              discover that the audience responded more to the designs created
+              in-house by the couple themselves.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden" style="display: none">
+                <p>
+                  With women springing up in every work field, the demand for
+                  smart and fashionable day-time clothing began to gain
+                  popularity and in just a year, GENERATION had already formed a
+                  large cult following of strong, forward minded women who were
+                  getting things done!
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1985-1986</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1986.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">here to stay</h2>
+            <p>
+              GENERATION has served to be a melting pot of creatives since its
+              very beginning: While it was a major hit for its innovative
+              designs, the brand also garnered quite a reputation for its
+              creative and beautifully executed photoshoots. Recruiting artists,
+              creative minded friends and relatives,
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden" style="display: none">
+                <p>
+                  every GENERATION campaign began to get as much traction for
+                  the imagery it put out as the clothes it was selling. The
+                  “Colours of Earth” collection built upon the idea of freedom
+                  and optimism with painstaking indigenous crafts such as tie
+                  dyeing, ajrak, rilli and block printing sourced from all over
+                  Pakistan becoming its language of communication.
+                </p>
+                <p>
+                  In just three years GENERATION had achieved enough success and
+                  admiration to open standalone stores in Liberty and Fortress
+                  Stadium in Lahore.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1987</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1987.webp?v=1670325438"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Who Run the World? GIRLS!</h2>
+            <p>
+              With the late Benazir Bhutto’s election campaign in full swing,
+              1987 was a time when modern liberal ideas began to manifest
+              amongst the mainstream. Women began to see themselves as icons of
+              power and pillars of strength, this reflected in the choice of
+              clothing as elements of power dressing such as shoulder pads, suit
+              jackets and menswear detailing began to gain traction.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden" style="display: none">
+                <p>
+                  GENERATION being ahead of the curve, organized the first ever
+                  fashion show in the country. Kinnaird College which was the
+                  hub of female empowerment and progressive thinking at the time
+                  served as the perfect venue, as friends, students and some
+                  renowned faces of the media industry volunteered to walk the
+                  runway in a collection that reflected the woman of the future
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1988</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1988.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Miss Bohemian</h2>
+            <p>
+              With the end of the decade inching closer, and Bhutto becoming the
+              first female Prime Minister the Muslim world had ever seen,
+              GENERATION began to bid adieu to the severe power dressing look
+              that had defined the 80s. It was time for a more relaxed breezy
+              approach to fashion and the people too were in a more celebratory
+              mood.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  The “Banjaran” collection which was showcased at Ménage,
+                  consisted of exciting and fun ghaghris (skirts) full of
+                  Bedouin detailing such as hand woven Ikats, rilli patchwork,
+                  tartan checks, and colour blocking. The show proved to be
+                  particularly memorable as the models walked the runway with
+                  matkas skillfully balanced on their heads to great applause by
+                  the audience.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1989</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1989.webp?v=1670325438"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">The Annual Sale extravaganza!</h2>
+            <p>
+              With GENERATION being the first of its kind retail experience, it
+              was no surprise that the concept of a mega sale event too was
+              introduced to the country by the brand. It was the first time ever
+              that merchandise was marked down so extensively, starting with
+              25-30% and going up to 60% as it progressed.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  Women were exalted. Beautiful desirable clothes and unbeatable
+                  value for money, what could be better? These sales marked the
+                  annual seasonal sale calendar which is followed by the entire
+                  country to this day.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1992</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1992.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">The Sindh Chapter</h2>
+            <p>
+              With a firm eye for indigenous craft, Nosheen Khan Rahman designed
+              a collection based on real chunri that was painstakingly sourced
+              from a small region of Interior Sindh. With the 80’s focus on
+              popping colours and power dressing, the delicate craft of
+              intricate tie dying had been all but forgotten in the favour of
+              more technologically advanced textile treatments.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  The collection, featuring the rising star of the time Resham,
+                  did not only turn out to be an instant hit, but also
+                  singlehandedly revived a whole cottage industry, with
+                  designers increasingly interpreting the craft in their works
+                  again.
+                </p>
+                <p>
+                  The turn of the new decade also saw the beginning of the
+                  brand’s love affair with the city by the sea, GENERATION made
+                  a grand entry in Karachi by opening two back to back outlets
+                  in Clifton and Bahadurabad.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1995</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1995.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">A Grand Affair</h2>
+            <p>
+              The 90s continued to build upon the indigenous desi aesthetic with
+              more experimentation in fabric and material. GENERATION began to
+              develop its own unique fabrics introducing jacquards, crinkle,
+              customized yarn dyed checks and stripes to the market. As well as
+              delving into organzas, velvets and denims.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  The colour palette began to embrace the 90s feel completely,
+                  leaving behind loud hues in favour of earthy and neutral
+                  tones. The “Kashmir Story” collection saw fully embroidered
+                  styles that would easily fall in the ‘designer’ category of
+                  formal wear.
+                </p>
+                <p>
+                  With increased demand, the factory moved to a purpose-built
+                  unit spanning over 30,000 feet of covered area at Ferozepur
+                  Road Lahore, the first of its kind catering exclusively to
+                  ready-made clothing for women.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">1998</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/1998.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Trendsetter</h2>
+            <p>
+              Another first; opening the first of its kind multi storey flagship
+              store in the heart of Lahore’s Gulberg area, the same location
+              which today is known as the fashion boulevard of Lahore with all
+              major clothing brands springing up in the vicinity.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  The landmark Zamzama store was also inaugurated around the
+                  same time, another area which soon became ‘cool’ with the
+                  opening of Karachi’s best restaurant, Okra next door as well
+                  as the first store of the country’s largest textile
+                  giant...any guesses?
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2002</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2002.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">The Graduate</h2>
+            <p>
+              With Gen X coming into the forefront, expats moving back in
+              droves, and a fresh batch of the very first Pakistan School of
+              Fashion Design (PSFD) graduates joining the industry, there was a
+              natural shift towards a more western aesthetic, with focus on
+              French construction and silhouette the designers were taught in
+              their curriculum.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  Shalwars turned into constructed bell bottoms, hem lines
+                  shrunk often going asymmetrical, with a reintroduction of
+                  darts and zips- the eastern garment got a whole new
+                  euro-centric ‘chic’ outlook.
+                </p>
+                <p>
+                  GENERATION too hired its first ever fashion design team from
+                  Pakistan School of Fashion Design (PSFD) whose modern
+                  aesthetic reflected fully in the “Mandarin” collection, which
+                  paired cheongsam inspired constructed short kurtis with bell
+                  bottoms and boot cut trousers set off with embroideries taking
+                  international inspiration as well, which in this case was the
+                  mandarin script.
+                </p>
+                <p>
+                  Increasing popularity and demand in Khyber Pakhtunkhwa lead to
+                  GENERATION’s first retail presence, opening its doors in
+                  Peshawar a year earlier.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2004</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2004.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Responsibly Risqué</h2>
+            <p>
+              With the resurgence of the post 9/11 return of expatriates coming
+              full circle and Musharraf’s liberal approach towards art and
+              culture, with fashion shows emerging on state sponsored events.
+              People started to become more comfortable trying somewhat risqué
+              elements in their clothing, demand for sleeveless shirts began to
+              re-emerge for the first time after Zia-ul-Haq’s era.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  Girls began listening to Britney Spears and Christina
+                  Aguilera’s music and desired to emulate their style. As
+                  locally a new kind of star, the super model was born, with
+                  Vaneeza, Iman Ali, Amina Haq and Iffat Omar ruling the roost,
+                  women started to become comfortable with their sensuality.
+                </p>
+                <p>
+                  The closest they could get to that in Pakistan was to chop of
+                  the sleeves of their kamiz, with low cut necklines, deep backs
+                  on a form fit silhouette. This much controversial uniform
+                  remained all the rage for quite a large chunk of the
+                  mid-2000s.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2005</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2005.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Khadija Comes Home</h2>
+            <p>
+              By the summer of 2005 the fitted silhouette was everywhere,
+              leaving women who still preferred to dress in a more modest
+              fashion with little to no options. GENERATION revived its classic
+              hand embroidered kurtas which had grown to be loved by women of
+              all ages, sizes and body types.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  The year also saw daughter of Nosheen and Saad Rahman entry
+                  into the brand, who joined the design team fresh after
+                  graduating from London College of Fashion.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2006</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2006.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">FUSION OF EAST &amp; WEST</h2>
+            <p>
+              With more and more fashion tastes reclining towards the west and
+              multiple international and local western wear brands popping up
+              across the country, Jeans, particularly Women wearing jeans became
+              a topic of much controversy and popularity amongst society.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  GENERATION’s FUSION OF EAST &amp; WEST bridged the gap by
+                  introducing the concept of fusion wear, tops, tunics and
+                  kurtis with a distinct desi aesthetic, offering a more modest
+                  outlook than the average T-shirt, yet fashionable and
+                  versatile enough to be styled with Jeans, Skirts and western
+                  style trousers.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2008</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2008.webp?v=1670325436"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Metamorphosis</h2>
+            <p>
+              With Khadija spreading her wings and finding her own pace within
+              the company, she began to introduce a number of changes which not
+              only set the road which would revolutionize the brand, but the
+              entire local retail industry as well.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  For the first time, an expansive set of Metric sizes including
+                  8,10,12,14 and 16 were introduced that made the line more
+                  approachable and easier to wear for women of a much more
+                  diverse size set. Furthermore, she proceeded to diversify the
+                  product range by introducing the concept of distinct lines
+                  with subsequent design philosophies which you know of today as
+                  Basic, Woman, Classic, Cottage, later adding Flo, Ming and
+                  ReGENerate to the mix.
+                </p>
+                <p>
+                  She also began to play with the brand’s image as shoots became
+                  more conceptualized and experimental, roping in creatives like
+                  Ather Ali Hafeez and the renowned artist Usman Saeed to work
+                  on the campaigns.
+                </p>
+                <p>
+                  GENERATION also became the first retail brand of Pakistan to
+                  introduce a dedicated Formals line, with authentic hand worked
+                  embellishment techniques such as zardozi, sitara and naqshi
+                  work, making ready to wear Pakistani formals a reality for the
+                  first time. This feat also won the brand its first ever Lux
+                  style award for 2008 as well as the subsequent one in 2009.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2013</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2013.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Velvety Beginnings</h2>
+
+            <p>
+              By the middle of the 2010s the brand had expanded its retail
+              presence by opening two stores in Karachi’s Dolmen Malls both in
+              the Clifton and Tariq Road vicinities, and the newly launched
+              GENERATION’s Formals line had garnered quite a cult following for
+              itself. However the craze truly began with the launch of the
+              coveted “Winter Velvets” collection,
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  with exquisitely hand embellished velvet outfits, the likes of
+                  which you would only find in the most coveted of designer’s
+                  studios who’d make you wait for months on end (if you could
+                  afford to order from them in the first place).
+                </p>
+                <p>
+                  Pieces having the same level of intricacy and attention to
+                  design were now available to buy off the rack at unbelievable
+                  prices. The fashion industry was shaken indeed. And a new
+                  regular much like GENERATION Whites in the summer, GENERATION
+                  Velvets went on to develop a recall value which still keeps
+                  people coming in droves every winter.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2014</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2014.webp?v=1670325437"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">New Fish in the Ocean</h2>
+
+            <p>
+              With a mini revolution going on in the industry, designers as well
+              as larger export groups began to invest heavily into their retail
+              presence in the local market. The digitally printed kurta was born
+              and fashion began to become heavily commodified. Suddenly it was
+              all about who had the zaniest fashion campaign and the lowest
+              priced product to go with it.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  GENERATION faced the brunt of this new-found competition head
+                  on as most of these retailers opened up in the same location
+                  as GENERATION’s Gulberg store in Lahore.
+                </p>
+                <p>
+                  It marked the beginning of GENERATION’s new era, with massive
+                  hiring of fresh creatives newly graduated from PIFD that year,
+                  as well as setting up for the first time, a dedicated
+                  Marketing department aimed at rethinking fashion advertisement
+                  for the changing times. The year began with the era of
+                  Abdullah Haris’s beautiful campaigns for GENERATION.
+                </p>
+                <p>
+                  The brand would go on to expand their presence in the twin
+                  cities with its first store in Rawalpindi.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2016</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2016.webp?v=1670325438"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Step Outside</h2>
+
+            <p>
+              Step Outside served in many ways, as the year of the awakening of
+              the brand. With conversations regarding women’s freedom of
+              movement alighting amongst the political circles, GENERATION
+              decided to put its money where its heart was and launch ‘Step
+              Outside’ a mega campaign inspired by ‘Why Loiter’ by feminist
+              author and activist Shilpa Phadke.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  featuring Zara Abid as the empowered GENERATION Woman, it was
+                  set in a utopian reimagination of the present, where the woman
+                  freely navigates public spaces without fear of stigma and
+                  harassment. While all other brands were focusing on foreign
+                  shoots, selling the fantasy of the unattainable, rich designer
+                  clad woman, GENERATION’s advertising featured an approachable
+                  woman accessorized with items from street vendors, feeling at
+                  home at dhabas, getting onto the metro bus and playing galli
+                  cricket. 
+                </p>
+                <p>
+                  Khadija Rahman’s first collection for the brand ‘A dot that
+                  went for a walk’ too debuted in the same year, A complete
+                  deconstruction of what South Asian garments mean she
+                  reinvented the shalwar, the kamiz and the dupatta putting out
+                  completely new ideas about what each of the staple components
+                  of desi fashion could look like. The collection truly
+                  revolutionized the idea of what a ‘fashion week’ collection is
+                  supposed to be, crafted in cottons, voiles and thick webbed
+                  organic netting, exploring new shapes and forms, the
+                  collection turned out to be the immediate darling of fashion
+                  critics all over the country, leading the brand to start
+                  another stint of victories at the Lux Style Awards.
+                </p>
+                <p>
+                  Lahore also welcomed its second GENERATION store in the
+                  beautiful Emporium Mall in 2016. /p&gt;
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2017</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2017.webp?v=1670325438"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">Greater Than Fear</h2>
+
+            <p>
+              With the launch of #greaterthanfear campaign, GENERATION
+              singlehandedly jump started the movement of inclusivity in
+              Pakistani advertising. The imagery featured women as young as 12
+              and as old as 72, of various sizes, ethnicities, professions et
+              al.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  The campaign even featured trans women, women belonging to
+                  ethnic minorities, and pregnant women. The beautiful campaign
+                  video by Umar Riaz set the bar for all relevant conversations
+                  in fashion and advertising.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2018</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2018.webp?v=1670325438"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">GEN X Shehzil Malik</h2>
+
+            <p>
+              The first ever Aurat March took place in 2018. The dream that the
+              team saw with #stepoutside began to show glimmers of hope with
+              women speaking up for their rights, reclaiming public spaces, and
+              questioning the status quo in a magnum opus of an event that
+              turned everyone’s attention to the role of women in society.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  GENERATION’s Shehzil Malik Collection released in 2017 proved
+                  the be the uniform of choice for many of the attendees. This
+                  was the brand’s first ever design collaboration with artist
+                  Shezil Malik, featuring edgy street clothes with the artist’s
+                  feminist messaging and illustrations emblazoned all over as
+                  bold prints and embroideries. The collection flew off the
+                  shelves in hours.
+                </p>
+                <p>
+                  The year ended on a sweet note for the residents of DHA in
+                  Lahore as GENERATION had opened up at Packages Mall and they
+                  would no longer have to travel all the way to Gulberg to get
+                  their fix.
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-section">
+      <strong class="year text-center text-md-right">2019</strong>
+      <div class="row align-items-end">
+        <div class="col-md-6 text-center text-md-right">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/2019.webp?v=1670325438"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="text">
+            <h2 class="text-uppercase">No Nonsense Nighat</h2>
+            <p>
+              Whilst most of 2018 was spent exploring the beauty and uniqueness
+              in the colour of our skins, with campaigns like “Nairang” and
+              “Saawan Rain ka Sapna”, dismantling self-projected stigmas towards
+              skin tones and conditions, whether it be melanin, vitiligo or
+              albinism 2019 projected the conversation of internalized racism
+              even further.
+            </p>
+            <div class="open-close">
+              <div class="slide js-slide-hidden">
+                <p>
+                  . Desis have been made to systematically look down upon
+                  everything about their culture and clothing as inferior to
+                  European ideals since the days of colonialism.
+                </p>
+                <p>
+                  “No Nonsense Nighat” was born out of the fantasy of a South
+                  Asia unperturbed by western standards of beautiful, cool or
+                  fashionable. Bringing unfazed desi-ness to the 21st century,
+                  No Nonsense Nighat wasn’t the typical desi damsel in distress,
+                  but instead equipped with utilitarian footwear, a side tied
+                  dupatta, her hair swept up in a paranda,
+                </p>
+                <p>
+                  she was ready to take over the world.She was loud, she was
+                  desi, she was a fashion icon and she was out to reclaim the
+                  term ‘paindoo’ because paindoo is not a slur. Her influence on
+                  fashion trends can be calculated by the fact that parandas
+                  made it to Milan fashion week just a few months after Nighat’s
+                  debut and they have undeniably gone on to become the must have
+                  accessory of the current decade. 
+                </p>
+              </div>
+              <span class="opener text-uppercase"
+                >READ <span class="more">MORE</span
+                ><span class="less">less</span></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // page init
+  jQuery(function(){
+  	initOpenClose();
+  });
+  
+  // open-close init
+  function initOpenClose() {
+  	jQuery('div.open-close').openClose({
+  		hideOnClickOutside: true,
+  		activeClass: 'active',
+  		opener: '.opener',
+  		slider: '.slide',
+  		animSpeed: 400,
+  		effect: 'slide'
+  	});
+  }
+  
+  /*
+   * jQuery Open/Close plugin
+   */
+  ;(function($) {
+  	function OpenClose(options) {
+  		this.options = $.extend({
+  			addClassBeforeAnimation: true,
+  			hideOnClickOutside: false,
+  			activeClass:'active',
+  			opener:'.opener',
+  			slider:'.slide',
+  			animSpeed: 400,
+  			effect:'fade',
+  			event:'click'
+  		}, options);
+  		this.init();
+  	}
+  	OpenClose.prototype = {
+  		init: function() {
+  			if (this.options.holder) {
+  				this.findElements();
+  				this.attachEvents();
+  				this.makeCallback('onInit', this);
+  			}
+  		},
+  		findElements: function() {
+  			this.holder = $(this.options.holder);
+  			this.opener = this.holder.find(this.options.opener);
+  			this.slider = this.holder.find(this.options.slider);
+  		},
+  		attachEvents: function() {
+  			// add handler
+  			var self = this;
+  			this.eventHandler = function(e) {
+  				e.preventDefault();
+  				if (self.slider.hasClass(slideHiddenClass)) {
+  					self.showSlide();
+  				} else {
+  					self.hideSlide();
+  				}
+  			};
+  			self.opener.bind(self.options.event, this.eventHandler);
+  
+  			// hover mode handler
+  			if (self.options.event === 'over') {
+  				self.opener.bind('mouseenter', function() {
+  					if (!self.holder.hasClass(self.options.activeClass)){
+  						self.showSlide();
+  					}
+  				});
+  				self.holder.bind('mouseleave', function() {
+  					self.hideSlide();
+  				});
+  			}
+  
+  			// outside click handler
+  			self.outsideClickHandler = function(e) {
+  				if (self.options.hideOnClickOutside) {
+  					var target = $(e.target);
+  					if (!target.is(self.holder) && !target.closest(self.holder).length) {
+  						self.hideSlide();
+  					}
+  				}
+  			};
+  
+  			// set initial styles
+  			if (this.holder.hasClass(this.options.activeClass)) {
+  				$(document).bind('click touchstart', self.outsideClickHandler);
+  			} else {
+  				this.slider.addClass(slideHiddenClass);
+  			}
+  		},
+  		showSlide: function() {
+  			var self = this;
+  			if (self.options.addClassBeforeAnimation) {
+  				self.holder.addClass(self.options.activeClass);
+  			}
+  			self.slider.removeClass(slideHiddenClass);
+  			$(document).bind('click touchstart', self.outsideClickHandler);
+  
+  			self.makeCallback('animStart', true);
+  			toggleEffects[self.options.effect].show({
+  				box: self.slider,
+  				speed: self.options.animSpeed,
+  				complete: function() {
+  					if (!self.options.addClassBeforeAnimation) {
+  						self.holder.addClass(self.options.activeClass);
+  					}
+  					self.makeCallback('animEnd', true);
+  				}
+  			});
+  		},
+  		hideSlide: function() {
+  			var self = this;
+  			if (self.options.addClassBeforeAnimation) {
+  				self.holder.removeClass(self.options.activeClass);
+  			}
+  			$(document).unbind('click touchstart', self.outsideClickHandler);
+  
+  			self.makeCallback('animStart', false);
+  			toggleEffects[self.options.effect].hide({
+  				box: self.slider,
+  				speed: self.options.animSpeed,
+  				complete: function() {
+  					if (!self.options.addClassBeforeAnimation) {
+  						self.holder.removeClass(self.options.activeClass);
+  					}
+  					self.slider.addClass(slideHiddenClass);
+  					self.makeCallback('animEnd', false);
+  				}
+  			});
+  		},
+  		destroy: function() {
+  			this.slider.removeClass(slideHiddenClass).css({ display:'' });
+  			this.opener.unbind(this.options.event, this.eventHandler);
+  			this.holder.removeClass(this.options.activeClass).removeData('OpenClose');
+  			$(document).unbind('click touchstart', this.outsideClickHandler);
+  		},
+  		makeCallback: function(name) {
+  			if (typeof this.options[name] === 'function') {
+  				var args = Array.prototype.slice.call(arguments);
+  				args.shift();
+  				this.options[name].apply(this, args);
+  			}
+  		}
+  	};
+  
+  	// add stylesheet for slide on DOMReady
+  	var slideHiddenClass = 'js-slide-hidden';
+  	(function() {
+  		var tabStyleSheet = $('<style type="text/css">')[0];
+  		var tabStyleRule = '.' + slideHiddenClass;
+  		tabStyleRule += '{position:absolute !important;left:-9999px !important;top:-9999px !important;display:block !important}';
+  		if (tabStyleSheet.styleSheet) {
+  			tabStyleSheet.styleSheet.cssText = tabStyleRule;
+  		} else {
+  			tabStyleSheet.appendChild(document.createTextNode(tabStyleRule));
+  		}
+  		$('head').append(tabStyleSheet);
+  	}());
+  
+  	// animation effects
+  	var toggleEffects = {
+  		slide: {
+  			show: function(o) {
+  				o.box.stop(true).hide().slideDown(o.speed, o.complete);
+  			},
+  			hide: function(o) {
+  				o.box.stop(true).slideUp(o.speed, o.complete);
+  			}
+  		},
+  		fade: {
+  			show: function(o) {
+  				o.box.stop(true).hide().fadeIn(o.speed, o.complete);
+  			},
+  			hide: function(o) {
+  				o.box.stop(true).fadeOut(o.speed, o.complete);
+  			}
+  		},
+  		none: {
+  			show: function(o) {
+  				o.box.hide().show(0, o.complete);
+  			},
+  			hide: function(o) {
+  				o.box.hide(0, o.complete);
+  			}
+  		}
+  	};
+  
+  	// jQuery plugin interface
+  	$.fn.openClose = function(opt) {
+  		return this.each(function() {
+  			jQuery(this).data('OpenClose', new OpenClose($.extend(opt, { holder: this })));
+  		});
+  	};
+  }(jQuery));
+</script>

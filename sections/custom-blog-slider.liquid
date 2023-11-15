@@ -1,0 +1,212 @@
+<script src="{{ 'jquery.custom.js' | asset_url }}" defer></script>
+<div class="custom-blog-slider">
+  <div class="Container">
+    <h2>On the Blog Today</h2>
+  </div>
+  <div class="custom-blog-slideshow" pause-on-hover="false">
+    <div class="slide">
+      <div class="image">
+        <div class="desktop-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/SHOPIFY.jpg?v=1687806730" /></div>
+        <div class="mobile-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/SHOPIFY-MOBILE.jpg?v=1687806730" /></div>
+        <a class="btn-read-more" href="https://generation.com.pk/blogs/latest-blogs/lazy-and-lovin-it-how-to-rock-eid-ul-azha-without-breaking-a-sweat">Read More</a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="image">
+        <div class="desktop-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/shopify-sliders.jpg?v=1685346071" /></div>
+        <div class="mobile-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/shopify-cover-mobile.jpg?v=1685346071" /></div>
+        <a class="btn-read-more" href="https://generation.com.pk/blogs/latest-blogs/from-scrap-to-chic-get-ready-to-swoon-over-generation-s-hot-new-jewellery-line">Read More</a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="image">
+        <div class="desktop-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/s9.jpg?v=1683900074" /></div>
+        <div class="mobile-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/c9_16c9da61-e0d6-45d0-8d24-b0d6de89cbf5.jpg?v=1684155870" /></div>
+        <a class="btn-read-more" href="https://generation.com.pk/blogs/latest-blogs/hello-fellow-fashion-enthusiasts">Read More</a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="image">
+        <div class="desktop-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/s8.jpg?v=1682007344" /></div>
+        <div class="mobile-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/c8.jpg?v=1682007344" /></div>
+        <a class="btn-read-more" href="https://generation.com.pk/blogs/latest-blogs/celebrating-chaand-raat-with-your-loved-ones-ideas-for-a-festive-night-out">Read More</a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="image">
+        <div class="desktop-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/s7.jpg?v=1680510267" /></div>
+        <div class="mobile-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/c7.jpg?v=1680510264" /></div>
+        <a class="btn-read-more" href="https://generation.com.pk/blogs/latest-blogs/spring-trends-you-need-to-have-on-your-radar">Read More</a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="image">
+        <div class="desktop-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/shopify_slider_6cec876a-6d6f-469f-9cad-6ac7868107ff.jpg?v=1678266174" /></div>
+        <div class="mobile-img"><img src="https://cdn.shopify.com/s/files/1/0650/8249/1105/files/shopify_cover_985bfe4a-6b16-4572-a35e-d43e816086a7.jpg?v=1678266174" /></div>
+        <a class="btn-read-more" href="https://generation.com.pk/blogs/latest-blogs/5-kickass-slogans-for-womens-daynot-sure-what-to-write-on-your-poster-weve-got-you-covered">Read More</a>
+      </div>
+    </div>    
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Custom Blog Slider",
+  "class": "shopify-section--slideshow",
+  "max_blocks": 5,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_fullscreen",
+      "label": "Show full-screen images",
+      "info": "If enabled, images will be resized to fit the entire screen.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrow",
+      "label": "Show bottom arrow",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change slides every",
+      "default": 5
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text",
+      "default": "#363636"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1560 x 1050px jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "750 x 1100px jpg recommended. If none is set, desktop image will be cropped."
+        },
+        {
+          "type": "checkbox",
+          "id": "apply_overlay",
+          "label": "Apply overlay on image",
+          "info": "This can improve text visibility.",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Desktop content position",
+          "options": [
+            {
+              "value": "middleLeft",
+              "label": "Middle left"
+            },
+            {
+              "value": "middleCenter",
+              "label": "Middle center"
+            },
+            {
+              "value": "bottomLeft",
+              "label": "Bottom left"
+            },
+            {
+              "value": "bottomCenter",
+              "label": "Bottom center"
+            }
+          ],
+          "default": "bottomLeft"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Sub-heading",
+          "default": "Slide title"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Tell your story"
+        },
+        {
+          "type": "header",
+          "content": "Button 1"
+        },
+        {
+          "type": "text",
+          "id": "button_1_text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "button_1_link",
+          "label": "Link"
+        },
+        {
+          "type": "header",
+          "content": "Button 2"
+        },
+        {
+          "type": "text",
+          "id": "button_2_text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "button_2_link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Custom Blog Slider",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
